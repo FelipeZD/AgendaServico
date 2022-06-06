@@ -1,0 +1,524 @@
+:root { 
+    --backgroud-pagina: #000;
+    --texto-pagina: #fff;
+
+    --background-servico: transparent;
+    --borda-servico: #fff;
+    --texto-servico: #28a745;
+    --borda-hover-servico: #28a745;
+    --hover-servico: #2c3e50;
+    --texto-hover-servico: #17a2b8;
+    
+    --texto-modal: #2c3e50;
+    --borda-modal:#2c3e50;
+    --texto-hover-modal:#fff;
+    --backgroud-hover-modal:#000;
+    --texto-ativo-modal: #080c2c;
+    --backgroud-ativo-modal:#28a745;
+
+    --background-agenda: #fd7e14;
+    --borda-agenda: #fff;
+    --texto-agenda: #080c2c;
+
+}
+
+
+
+html, body {
+	height: 100%;
+	background-color: var(--backgroud-pagina);
+    width:100%;
+}
+
+.modal {
+	background-color:transparent!important;
+}
+
+#servicos {
+	border: 3px solid var(--texto-pagina);
+}
+
+.titulo {
+	color: var(--texto-pagina);
+}
+
+button.servico {
+	padding: 15px;
+	background-color: transparent;
+	border: 1px solid #527881;
+	color: #fff;
+	cursor: pointer;
+}
+
+.div-servico {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.125rem solid ;
+    border-color: var(--borda-servico);
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-servico {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--texto-servico);
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: var(--background-servico);
+    border: 0.125rem solid ;
+    border-color: var(--borda-servico);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-servico:hover {
+    color: var(--texto-hover-servico);
+    background-color: var(--hover-servico);
+    border-color: var(--borda-hover-servico);
+}
+
+.btn-servico:focus,
+.btn-servico.focus {
+    color: #fff;
+    background-color: #fff;
+    border-color: #527881;
+    box-shadow: 0 0 0 0.2rem #527881;
+}
+
+.btn-servico.disabled,
+.btn-servico:disabled {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-servico:not(:disabled):not(.disabled):active,
+.btn-servico:not(:disabled):not(.disabled).active,
+.show>.btn-servico.dropdown-toggle {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+}
+
+.btn-servico:not(:disabled):not(.disabled):active:focus,
+.btn-servico:not(:disabled):not(.disabled).active:focus,
+.show>.btn-servico.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.modal-servico {
+	background-color: var(--backgroud-pagina)!important;
+    color: var(--texto-pagina);
+    display: flex;
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 0 solid #dee2e6;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+    color: #fff;
+}
+
+.btn-dias {
+    color: var(--texto-modal);
+    background-color: transparent;
+    width:90px;
+	display: inline-block;
+	font-weight: 400;
+	border: 0.125rem solid ;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.125rem solid ;
+    border-color: var(--borda-modal);
+	padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+
+.btn-dias:hover {
+    color: var(--texto-hover-modal);
+    background-color: var(--backgroud-hover-modal);
+    border-color: #fff;
+}
+
+.btn-dias:focus,
+.btn-dias.focus {
+    color: #fff;
+    background-color: #527881;
+    
+}
+
+.btn-dias.disabled,
+.btn-dias:disabled {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-dias:not(:disabled):not(.disabled):active,
+.btn-dias:not(:disabled):not(.disabled).active,
+.show>.btn-dias.dropdown-toggle {
+    color: var(--texto-ativo-modal);
+    background-color: var(--backgroud-ativo-modal);
+    border-color: #fff;
+}
+
+.btn-dias:not(:disabled):not(.disabled):active:focus,
+.btn-dias:not(:disabled):not(.disabled).active:focus,
+.show>.btn-servico.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-funcionario {
+    color: var(--texto-modal);
+    background-color: transparent;
+    height: 60px;
+    width: 30%;
+	display: inline-block;
+	font-weight: 400;
+	border: 0.125rem solid ;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.125rem solid ;
+    border-color: var(--borda-modal);
+	
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+
+.btn-funcionario:hover {
+    color: var(--texto-hover-modal);
+    background-color: var(--backgroud-hover-modal);
+    border-color: #fff;
+}
+
+.btn-funcionario:focus,
+.btn-funcionario.focus {
+    color: #fff;
+    background-color: #527881;
+    border-color: #caa37a;
+    box-shadow: 0 0 0 0.2rem #caa37a;
+}
+
+.btn-funcionario.disabled,
+.btn-funcionario:disabled {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-funcionario:not(:disabled):not(.disabled):active,
+.btn-funcionario:not(:disabled):not(.disabled).active,
+.show>.btn-funcionario.dropdown-toggle {
+    color: var(--texto-ativo-modal);
+    background-color: var(--backgroud-ativo-modal);
+    border-color: #fff;
+}
+
+.btn-funcionario:not(:disabled):not(.disabled):active:focus,
+.btn-funcionario:not(:disabled):not(.disabled).active:focus,
+.show>.btn-servico.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.bg-secondary {
+    background-color: #0f1122 !important;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-expand-lg>.container,
+    .navbar-expand-lg>.container-fluid,
+    .navbar-expand-lg>.container-sm,
+    .navbar-expand-lg>.container-md,
+    .navbar-expand-lg>.container-lg,
+    .navbar-expand-lg>.container-xl {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+}
+
+#mainNav .navbar-brand {
+    color: #fff;
+}
+
+#mainNav .navbar-nav {
+    margin-top: 1rem;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:active,
+#mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #fff;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        transition: padding-top 0.3s, padding-bottom 0.3s;
+    }
+    #mainNav .navbar-brand {
+        font-size: 1.75em;
+        transition: font-size 0.3s;
+    }
+    #mainNav .navbar-nav {
+        margin-top: 0;
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
+        color: #fff;
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
+        color: #fff;
+    }
+    #mainNav.navbar-shrink {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ml-auto,
+.mx-auto {
+    margin-left: auto !important;
+}
+
+.rounded {
+    border-radius: 0.5rem !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+.page-section .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+
+@media (min-width: 992px) {
+    .page-section .page-section-heading {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
+.masthead {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+}
+
+.masthead .masthead-heading {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+}
+
+.masthead .masthead-subheading {
+    font-size: 1.25rem;
+}
+
+.masthead .masthead-avatar {
+    width: 15rem;
+}
+
+@media (min-width: 992px) {
+    .masthead {
+        padding-top: calc(6rem + 104px);
+        padding-bottom: 6rem;
+    }
+    .masthead .masthead-heading {
+        font-size: 4rem;
+        line-height: 3.5rem;
+    }
+    .masthead .masthead-subheading {
+        font-size: 1.5rem;
+    }
+}
+
+.btn-agendar {
+    color: var(--texto-agenda);
+    background-color: var(--background-agenda);
+    border-color: var(--borda-agenda);
+    width:90%;
+	display: inline-block;
+	font-weight: 400;
+	border: 0.125rem solid ;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.125rem solid ;
+	padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+
+.btn-agendar:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-agendar:focus,
+.btn-agendar.focus {
+    color: #000;
+    background-color: #fff;
+    border-color: #caa37a;
+    box-shadow: 0 0 0 0.2rem #caa37a;
+}
+
+.btn-agendar.disabled,
+.btn-agendar:disabled {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-agendar:not(:disabled):not(.disabled):active,
+.btn-agendar:not(:disabled):not(.disabled).active,
+.show>.btn-agendar.dropdown-toggle {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+}
+
+.btn-agendar:not(:disabled):not(.disabled):active:focus,
+.btn-agendar:not(:disabled):not(.disabled).active:focus,
+.show>.btn-servico.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.label-agendar{
+	position: relative;
+	top: 75%;
+}
+
+.barra{
+position:relative;
+top: -500px;
+left: -400px;
+
+}
+
+.butao{
+border-radius: 50px;
+
+}
+
+

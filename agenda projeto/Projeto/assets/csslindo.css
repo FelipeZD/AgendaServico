@@ -1,0 +1,39 @@
+/* Centralizando Texto */ 
+form{
+    text-align: center;
+}
+input[type='submit']{
+    margin: 0 10px 0 10px;
+}
+/* Criando o meio do cubo */ 
+.cube {
+    background: #dc2e2e;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: 50px auto;
+  }
+  /* Topo do Cubo */ 
+  .cube::before {
+    content: '';
+    display: inline-block;
+    background: #f15757;
+    width: 250px;
+    height: 20px;
+    transform: skewX(-40deg);
+    position: absolute;
+    top: -20px;
+    left: 8px;
+  }
+  /* Lado do cubo */ 
+  .cube::after {
+    content: '';
+    display: inline-block;
+    background: #9e1515;
+    width: 16px;
+    height: 250px;
+    transform: skewY(-50deg);
+    position: absolute;
+    top: -10px;
+    left: 100%;
+  }
